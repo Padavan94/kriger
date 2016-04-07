@@ -1,0 +1,30 @@
+@media only screen and (max-width : 1200px) {
+	.header__logo, .footer__logo {width: 300px;}
+	.header__logo img, .footer__logo img{width: 100%; height: auto;}
+	.header__info,.footer__info{min-width: 620px;}
+}
+
+@media only screen and (max-width : 992px) {
+	.header__container{flex-wrap: wrap;}
+	.header__logo, .footer__logo{width: 100%; text-align: center; margin-bottom: 20px;}
+	.header__logo img, .footer__logo img{width: 300px; height: auto;}
+	.header__info,.footer__info{min-width: 100%;}
+	.header{height: auto; padding: 20px 10px;}
+
+
+
+}	
+ 
+@media only screen and (max-width : 768px) {
+	.header__info,.footer__info{flex-wrap: wrap; justify-content: space-around;}
+	.header__info__mail,.header__info__phones,.header__info__order{margin-bottom: 20px;}
+}
+
+
+@media only screen and (max-width : 480px) {
+	
+}
+
+@media only screen and (max-width : 360px) {
+	
+}
