@@ -2,6 +2,11 @@
 	.header__logo, .footer__logo {width: 300px;}
 	.header__logo img, .footer__logo img{width: 100%; height: auto;}
 	.header__info,.footer__info{min-width: 620px;}
+	.our-advantages__title h2,
+	.calculator__title h2{font-size: 35px;}
+	.our-advantages{min-width: 534px;}
+	.completed-projects__carousel__item-img{width: 464px; margin-bottom: 2px;}
+	.completed-projects__carousel__item-type{padding: 15px 15px 15px 100px;}
 }
 
 @media only screen and (max-width : 992px) {
@@ -10,19 +15,79 @@
 	.header__logo img, .footer__logo img{width: 300px; height: auto;}
 	.header__info,.footer__info{min-width: 100%;}
 	.header{height: auto; padding: 20px 10px;}
-
-
-
+	.banner__inner{flex-direction: column; padding: 35px;}
+	.banner__inner__question{margin-bottom: 30px;}
+	.banner__inner__form-wrap{margin-left: 0;}
+	.calculator{width: 340px;}
+	.our-advantages{min-width: 340px;}
+	.calculator__inner, .our-advantages__inner{padding: 40px 5px;}
+	.our-advantages__item span, .quality-standards__item span{font-size: 15px;}
+	.how-we-work__steps::before{display: none;}
+	.how-we-work__steps {justify-content: space-around; flex-wrap: wrap;}
+	.how-we-work__step__circle{margin-bottom: 45px;}
+	.how-we-work__step__circle::after{bottom: -31px;}
+	.how-we-work__step{margin-bottom: 30px;}
+	.completed-projects__carousel__controls{position: relative; width: 100%; margin-bottom: 30px;}
+	.completed-projects__carousel__item-text{padding: 0px 15px;}
+	.order__inner{flex-direction: column;}
+	.order__text,.order__form-wrap{width: 100%; margin-bottom: 20px;}
+	.banner{padding: 20px 0px;}
+	.banner__inner__question{justify-content: center; padding-top: 10px; border-top: 1px solid #fff;}
+	.banner__inner__losung{padding: 15px 0;}
+	.banner__inner__losung h1{margin-bottom: 30px;}
 }	
  
 @media only screen and (max-width : 768px) {
 	.header__info,.footer__info{flex-wrap: wrap; justify-content: space-around;}
-	.header__info__mail,.header__info__phones,.header__info__order{margin-bottom: 20px;}
+	.header__info__mail, .header__info__phones,.header__info__order,
+	.footer__info__mail, .footer__info__phones,.footer__info__order{margin-bottom: 20px; display: flex;}
+	.header__info__order-link, .footer__info__order-link{top: 0;}
+	.header__info__phones, .footer__info__phones{justify-content: space-between; flex-direction: column;}
+	.header__logo, .footer__logo{margin-bottom: 50px;}
+	.header, .footer{padding-left: 0; padding-right: 0;}
+	.banner__inner__question{font-size: 27px;}
+	.banner__inner__form-wrap{min-width: 100%;}
+	.capabilities__items{padding-left: 74px; text-align: left;}
+	.capabilities__circles{ flex-wrap: wrap; justify-content: space-around;}
+	.capabilities__circles-descr{padding-bottom: 30px;}
+	.combo-section__inner{flex-direction: column;}
+	.calculator{width: 100%; max-width: 100%; margin-bottom: 30px;}
+	.calculator, .our-advantages{min-width: 100%;}
+	.combo-section{height: 1500px; min-height: 1500px;}
+	.how-we-work__title{margin-bottom: 40px;}
+	.completed-projects__carousel__item-img{width: 100%;}
+	.completed-projects__carousel__item-img{width: 100%; height: auto; margin-bottom: 25px;}
+	.completed-projects__carousel__item-text h4{margin-bottom: 14px;}
+	.completed-projects, .how-we-work{padding: 40px 0;}
+	.completed-projects__title, .quality-standards__title {margin-bottom: 40px;}
+	.quality-standards__container{padding-top: 231px; padding-left: 66px; background-position: center top;}
+	.quality-standards__container::after{top: 0; left: 50%; margin-left: -100px; margin-top: auto;}
+	.quality-standards,.certificates{padding: 40px 0;}
+	.certificates__title{margin-bottom: 40px;}
+	.certificates__container a{margin-bottom: 30px;}
+	.footer__info__mail, .footer__info__order, .footer__info__phones, .header__info__mail, .header__info__order, .header__info__phones{margin: 5px 5px 10px 5px;}
+	
 }
 
 
 @media only screen and (max-width : 480px) {
-	
+	.footer__logo img, .header__logo img{width: 280px;}
+	.banner__inner{padding: 30px 10px;}
+	.our-services__catalog__filters a:not(:last-child)::after{display: none;}
+	.our-services__title{margin: 40px 0;}
+	.title h2{font-size: 30px;}
+	.capabilities__items{padding-left: 55px;}
+	.our-services__download{margin: 40px;}
+	.combo-section{height: 1600px; min-height: 1600px;}
+	.how-we-work{padding: 40px 0;}
+	.completed-projects__carousel__control svg{height: 55px;}
+	.order__text{padding: 10px 20px;}
+	.order__form__input{width: 100%;}
+	.order{padding: 25px 0;}
+	.banner__container{padding: 4px;}
+	.banner__inner__losung{font-size: 32px;}
+	.banner__inner__losung h1{font-size: 41px;}
+	.our-advantages__item, .quality-standards__item{text-align: left;}
 }
 
 @media only screen and (max-width : 360px) {

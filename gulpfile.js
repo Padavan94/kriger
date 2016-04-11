@@ -19,6 +19,7 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     replace = require('gulp-replace'),
     plumber = require('gulp-plumber'),
+    uncss = require("gulp-uncss"),
     reload = browserSync.reload;
 
 var path = {
@@ -161,7 +162,7 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style) 
-        .pipe(plumber())
+        /*.pipe(plumber())*/
         /*.pipe(sourcemaps.init())*/
         .pipe(sass({
             includePaths: ['src/style/'],

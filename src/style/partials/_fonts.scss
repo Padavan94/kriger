@@ -3,3 +3,4 @@
 @include font-face("fran-r", "../fonts/goticbook", normal, $file-formats: woff);
 @include font-face("fran-i", "../fonts/goticitalic", normal, $file-formats: woff);
 @include font-face("fran-d", "../fonts/goticdemi", normal, $file-formats: woff);
+@include font-face("page", "../fonts/phage", normal, $file-formats: woff);

@@ -9,6 +9,7 @@
  */
 //= partials/helper.js
 //= partials/owl.carousel.js
+//= partials/jquery.magnific-popup.min.js
 
 function forSVG() {
     $('.svg').each(function() {
@@ -101,6 +102,16 @@ $(document).ready(function() {
 	    }
 	    
 	});	
+
+	// magnific
+
+	$(".certificates__item").magnificPopup({
+	  type:'image',
+	  midClick: true,
+	  gallery:{
+	    enabled:true
+	  }
+	});
 
 });
 

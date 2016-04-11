@@ -11,6 +11,9 @@
 @import "partials/variable";
 @import "partials/fonts";
 @import "partials/owl.carousel.scss";
+@import "partials/magnific-popup.scss";
+
+
 
 
 body{
@@ -25,7 +28,7 @@ a{
 }
 .seporator{
 	background-image: url("/img/schema.png");
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 85px;
@@ -122,7 +125,7 @@ a{
 				&:active,
 				&:focus{
 					background-color: #d63a25;
-					color: #fff;
+					color: #fffeee;
 					text-decoration: none;
 				}
 			}
@@ -148,19 +151,54 @@ a{
 		color: #fff;
 		padding: 68px;
 		display: flex;
+		justify-content: space-between;
+		&__losung{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-size: 42px;
+			text-align: center;
+			font-family: "fran-d";
+			text-align: center;
+			h1{
+				font-size: 63px;
+				margin-top: 0;
+				text-transform: uppercase;
+				margin-bottom: 70px;
+				font-family: "page";
+			}
+			.c1{
+				color: #f93f26;
+				text-transform: uppercase;
+			}
+			.c2{
+				color: #fc7720;
+				text-transform: uppercase;
+			}
+			.c3{
+				color: #fae23f;
+				text-transform: uppercase;
+				margin-bottom: 32px;
+			}
+			.fs25{
+				font-size: 25px;
+				text-transform: uppercase;
+			}
+		}
 		&__question{
-			font-size: 49px;
+			font-size: 30px;
 			color: #fff;
 			text-align: center;
 			font-family: "fran-d";
 			display: flex;
 			align-items: center;
+			margin-bottom: 40px;
 			span{
 				text-transform: uppercase;
 			}
 		}
 		&__form-wrap{
-			min-width: 324px;
+			min-width: 371px;
 			margin-left: 38px;
 		}
 	}
@@ -492,16 +530,18 @@ a{
 	}
 	&__item{
 		margin-bottom: 30px;
+		text-align: center;
 		span{
 			position: relative;
 			display: inline-block;
 			text-transform: uppercase;
 			font-size: 19px;
+			width: 100%;
 			&:before{
 				content: "";
 				width: 37px;
 				height: 37px;
-				background-image: url("/img/chck.png");
+				background-image: url("/img/chck2.png");
 				background-repeat: no-repeat;
 				position: absolute;
 				left: -60px;
@@ -710,7 +750,7 @@ a{
 
 .order{
 	padding: 65px 0px;
-	background-color: #ad3013;
+	background-color: #d6421a;
 	&__inner{
 		display: flex;
 		justify-content: space-between;
@@ -755,7 +795,7 @@ a{
 				font-family: "fran-d";
 				transition: background-color .2s ease;
 				&:hover{
-					background-color: #04ca12;
+					background-color: #0ab015;
 				}
 			}
 		}
@@ -837,6 +877,20 @@ a{
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
+	}
+	&__item{
+		width: 288px;
+		height: 413;
+		overflow: hidden;
+		img{
+			transition: transform .3s ease;
+			text-transform: scale(1.0);
+		}
+		&:hover{
+			img{
+				transform: scale(1.2);
+			}
+		}
 	}
 }
 
