@@ -49,18 +49,18 @@
 					<div class="banner__inner__question">
 						<div>Хотите узнать, когда <br> <span>ЗАРАБОТАЕТ ВАШ КОТЕЛ?</span></div>
 					</div>
-					<form action="#" class="banner__form">
+					<form action="/post.php" method= "POST" class="banner__form">
 						<div class="banner__form__input">
-							<input type="text" placeholder="Ваше имя">
+							<input type="text" placeholder="Ваше имя" name="name">
 						</div>
 						<div class="banner__form__input" >
-							<input type="text" placeholder="Ваш номер телефона">
+							<input type="text" placeholder="Ваш номер телефона" name="phone">
 						</div>
 						<div class="banner__form__input" >
-							<input type="text" placeholder="Ваш E-mail">
+							<input type="text" placeholder="Ваш E-mail" name="mail">
 						</div>
 						<div class="banner__form__input">
-							<input type="text" placeholder="Мощность">
+							<input type="text" placeholder="Мощность" name="power">
 						</div>
 						<div class="banner__form__submit">
 							<input type="submit" value="позвоните нам">
@@ -83,8 +83,8 @@
 				<a href="#" param="waterCotl2" class="filter">котлы для производства перегретой воды</a>
 				<a href="#" param="waterCotl3" class="filter">паровые котлы</a>
 				<a href="#" param="waterCotl4" class="filter">термомасляные котлы</a>
-				<a href="#" param="waterCotl5" class="filter">предтопки</a>
-				<a href="#" param="waterCotl6" class="filter">топливные склады</a>
+				<!-- <a href="#" param="waterCotl5" class="filter">предтопки</a> -->
+				<!-- <a href="#" param="waterCotl6" class="filter">топливные склады</a> -->
 			</div>
 			<div class="our-services__catalog__items owl-carousel">
 				<div class="our-services__catalog__item">
@@ -163,17 +163,20 @@
 					</div>
 					<form action="#" class="calculator__form">
 						<div class="calculator__form__input">
-							<label for="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</label>
+							<label class="ic1" for="">Выберите вид котла</label>
 							<select name="#" id="#">
-								<option value="1">Мощность</option>
-								<option value="1">Мощность</option>
-								<option value="1">Мощность</option>
-								<option value="1">Мощность</option>
+								<option value="1">Водогрейный котел</option>
+								<option value="1">Термомасляный котел</option>
+								<option value="1">Для производства перегретой воды</option>
 							</select>
 						</div>
 						<div class="calculator__form__input">
-							<label for="">Lorem ipsum dolor sit amet, consectetur adipisicing elit</label>
-							<textarea name="#" id="#" cols="30" rows="10" placeholder="Ваш коментарий"></textarea>
+							<label class="ic2" for="">Укажите тип топлива</label>
+							<input type="text" placeholder="Тип топлива">
+						</div>
+						<div class="calculator__form__input">
+							<label class="ic3" for="">Введите мощность котла</label>
+							<input type="text" placeholder="Мощность">
 						</div>
 						<a href="#" class="calculator__form__button">УЗНАТЬ СТОИМОСТЬ</a>
 					</form>
@@ -288,7 +291,7 @@
 		<div class="order__inner">
 			<div class="order__text">
 				<h4>оставьте заявку</h4>
-				<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+				<p>Введите свои контактные данные в форму справа и наш менеджер свяжется с вами в ближайшее время.</p>
 			</div>
 			<div class="order__form-wrap">
 				<form action="#" class="order__form">
@@ -301,18 +304,15 @@
 					<div class="order__form__input">
 						<input type="text" placeholder="Ваш номер телефона">
 					</div>
-					<div class="order__form__input">
-						<input type="text" placeholder="Мощность">
-					</div>
 					<div class="order__form__submit">
-						<input type="submit" value="ЗАКАЗАТЬ">
+						<input type="submit" value="Перезвоните мне">
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="quality-standards">
+<!-- <section class="quality-standards">
 	<div class="container">
 		<div class="quality-standards__title title">
 			<h2>СТАНДАРТЫ КАЧЕСТВА</h2>
@@ -327,7 +327,7 @@
 
 		</div>
 	</div>
-</section>
+</section> -->
 
 <div class="seporator"></div>
 
