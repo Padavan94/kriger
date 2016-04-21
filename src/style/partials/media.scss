@@ -35,6 +35,8 @@
 	.banner__inner__question{justify-content: center; padding-top: 10px; border-top: 1px solid #fff;}
 	.banner__inner__losung{padding: 15px 0;}
 	.banner__inner__losung h1{margin-bottom: 30px;}
+	.completed-projects__carousel__item-text{margin-top: 15px; width: 100%;}
+	.completed-projects__carousel__item-img{width: 100%;}
 }	
  
 @media only screen and (max-width : 768px) {
@@ -66,7 +68,7 @@
 	.certificates__title{margin-bottom: 40px;}
 	.certificates__container a{margin-bottom: 30px;}
 	.footer__info__mail, .footer__info__order, .footer__info__phones, .header__info__mail, .header__info__order, .header__info__phones{margin: 5px 5px 10px 5px;}
-	
+	.completed-projects__carousel__item-descr{padding: 15px;}
 }
 
 
@@ -88,6 +90,7 @@
 	.banner__inner__losung{font-size: 32px;}
 	.banner__inner__losung h1{font-size: 41px;}
 	.our-advantages__item, .quality-standards__item{text-align: left;}
+	.container{padding-left: 0;padding-right: 0;}
 }
 
 @media only screen and (max-width : 360px) {

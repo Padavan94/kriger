@@ -255,6 +255,15 @@ a{
 	&__title{
 		margin: 75px 0;
 	}
+	&__descr{
+		padding: 40px 0px;
+		font-size: 20px;
+		text-align: center;
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
 	&__catalog{
 		&__filters{
 			text-align: center;
@@ -742,11 +751,15 @@ a{
 		}
 
 		&__item{
+			&-descr{
+				padding: 15px 0;
+				font-size: 17px;
+			}
 			&-img{
 				float: left;
-				margin-right: 44px;
-				width: 635px;
+				width: 50%;
 				position: relative;
+				font-size: 16px;
 				img{
 					width: 100%;
 					height: auto;
@@ -757,9 +770,7 @@ a{
 				font-size: 16px;
 				color: #fff;
 				font-family: "fran-d";
-				position: absolute;
-				bottom: 15px; 
-				right: -10px;
+				position: relative;
 				background-color: #e92e1c;
 				z-index: 999;
 				padding: 30px 100px;
@@ -776,21 +787,40 @@ a{
 					top: 50%;
 					margin-top: -30px;
 					border: 2px solid #000;
-					background-image: url("/img/tango.svg");
 					background-position: center;
 					background-size: 80%;
 					background-repeat: no-repeat;
 				}
+				&--tango:before{
+					background-image: url("/img/tango.svg");
+				}
+				&--tea:before{
+					background-image: url("/img/tea.svg");
+				}
+				&--tea2:before{
+					background-image: url("/img/tea2.svg");
+				}
+				&--fabric:before{
+					background-image: url("/img/fabric.svg");
+				}
 			}
 			&-text{
-				padding: 15px;
-				padding-top: 150px;
+				padding: 150px 30px 10px 60px;
 				color: #373737;
 				font-family: "fran-d";
 				font-size: 16px;
+				float: left;
+				width: 50%;
 				h4{
 					text-transform: uppercase;
 					margin-bottom: 40px;
+				}
+				table{
+					width: 100%;
+					td{
+						border: 1px solid #333;
+						padding: 5px 20px;
+					}
 				}
 			}
 		}

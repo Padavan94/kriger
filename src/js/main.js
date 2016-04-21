@@ -79,16 +79,15 @@ $(document).ready(function() {
 	})
 
 	owl2.owlCarousel({
-	    loop:true,
 	    autoplay: true,
 	    autoplayHoverPause: true,
 	    items: 1,
 	})
 
 
-	$('.filter, .filter2').on('click', function (event) {
+	$('.filter2').on('click', function (event) {
 		event.preventDefault();
-		$(".filter, .filter2").removeClass('active');
+		$(".filter2").removeClass('active');
 		$(this).addClass('active')
 		var param = $(this).attr("param");
 		console.log(param);
@@ -99,9 +98,25 @@ $(document).ready(function() {
 	    } else {
 	    	owl2.trigger('replace.owl.carousel', html)
 	        .trigger('refresh.owl.carousel');
-	    }
-	    
+	    }  
 	});	
+
+	// filter text
+
+	$('.filter').click(function(event) {
+		event.preventDefault();
+		$(".filter").removeClass('active');
+		$(this).addClass('active');
+		var param = $(this).attr("param");
+		$(".our-services__descr").removeClass('active');
+		$(".our-services__descr").each(function(index, el) {
+			if( $(this).hasClass(''+param) ) {
+				$(this).addClass('active');
+			}
+		});
+
+	});
+
 
 	// magnific
 
@@ -318,120 +333,20 @@ $(document).ready(function() {
 				// cases for owl2
 
 				case "type1" : 
-					html = '<div class="completed-projects__carousel__item">' +
-								'<div class="completed-projects__carousel__item-img">' +
-									'<div class="completed-projects__carousel__item-type">' +
-										'Лесоперерабатывающая промышленность 1' +
-									'</div>' +
-									'<img src="/img/slide1.jpg" alt="slide1">' +
-								'</div>' +
-								'<div class="completed-projects__carousel__item-text">' +
-									'<h4>Lorem ipsum dolor sit amet</h4>' +
-									'<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-									'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>' +
-								'</div>' +
-							'</div>' +
-							'<div class="completed-projects__carousel__item">' +
-								'<div class="completed-projects__carousel__item-img">' +
-									'<div class="completed-projects__carousel__item-type">' +
-										'Лесоперерабатывающая промышленность 1' +
-									'</div>' +
-									'<img src="/img/slide1.jpg" alt="slide1">' +
-								'</div>' +
-								'<div class="completed-projects__carousel__item-text">' +
-									'<h4>Lorem ipsum dolor sit amet</h4>' +
-									'<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-									'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>' +
-								'</div>' +
-							'</div>' ;
+					html = html = $(".type-1").html();
 					break;
 
 				case "type2" : 
-					html = '<div class="completed-projects__carousel__item">' +
-								'<div class="completed-projects__carousel__item-img">' +
-									'<div class="completed-projects__carousel__item-type">' +
-										'Лесоперерабатывающая промышленность 2' +
-									'</div>' +
-									'<img src="/img/slide1.jpg" alt="slide1">' +
-								'</div>' +
-								'<div class="completed-projects__carousel__item-text">' +
-									'<h4>Lorem ipsum dolor sit amet</h4>' +
-									'<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-									'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>' +
-								'</div>' +
-							'</div>'+
-							'<div class="completed-projects__carousel__item">' +
-								'<div class="completed-projects__carousel__item-img">' +
-									'<div class="completed-projects__carousel__item-type">' +
-										'Лесоперерабатывающая промышленность 2' +
-									'</div>' +
-									'<img src="/img/slide1.jpg" alt="slide1">' +
-								'</div>' +
-								'<div class="completed-projects__carousel__item-text">' +
-									'<h4>Lorem ipsum dolor sit amet</h4>' +
-									'<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-									'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>' +
-								'</div>' +
-							'</div>' ;
+					html = $(".type-2").html();
 					break;
 
 
 				case "type3" : 
-					html = '<div class="completed-projects__carousel__item">' +
-								'<div class="completed-projects__carousel__item-img">' +
-									'<div class="completed-projects__carousel__item-type">' +
-										'Лесоперерабатывающая промышленность 3' +
-									'</div>' +
-									'<img src="/img/slide1.jpg" alt="slide1">' +
-								'</div>' +
-								'<div class="completed-projects__carousel__item-text">' +
-									'<h4>Lorem ipsum dolor sit amet</h4>' +
-									'<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-									'Excepteur sint occaecat cupidatat non </p>' +
-								'</div>' +
-							'</div>' +
-							'<div class="completed-projects__carousel__item">' +
-								'<div class="completed-projects__carousel__item-img">' +
-									'<div class="completed-projects__carousel__item-type">' +
-										'Лесоперерабатывающая промышленность 3' +
-									'</div>' +
-									'<img src="/img/slide1.jpg" alt="slide1">' +
-								'</div>' +
-								'<div class="completed-projects__carousel__item-text">' +
-									'<h4>Lorem ipsum dolor sit amet</h4>' +
-									'<p>Consectetur adipisicing elit, sed do eiusmod olore magna enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-									'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>' +
-								'</div>' +
-							'</div>';
+					html = $(".type-3").html();
 					break;
 
 				case "type4" : 
-					html = '<div class="completed-projects__carousel__item">' +
-								'<div class="completed-projects__carousel__item-img">' +
-									'<div class="completed-projects__carousel__item-type">' +
-										'Лесоперерабатывающая промышленность 4' +
-									'</div>' +
-									'<img src="/img/slide1.jpg" alt="slide1">' +
-								'</div>' +
-								'<div class="completed-projects__carousel__item-text">' +
-									'<h4>Lorem ipsum dolor sit amet</h4>' +
-									'<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-									'Excepteur sint occaecat cupidatat non proident,  id est laborum. </p>' +
-								'</div>' +
-							'</div>' +
-							'<div class="completed-projects__carousel__item">' +
-								'<div class="completed-projects__carousel__item-img">' +
-									'<div class="completed-projects__carousel__item-type">' +
-										'Лесоперерабатывающая промышленность 4' +
-									'</div>' +
-									'<img src="/img/slide1.jpg" alt="slide1">' +
-								'</div>' +
-								'<div class="completed-projects__carousel__item-text">' +
-									'<h4>Lorem ipsum dolor sit amet</h4>' +
-									'<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
-									'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>' +
-								'</div>' +
-							'</div>';
+					html = $(".type-4").html();
 					break;
 
 			default: 
