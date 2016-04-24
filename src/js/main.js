@@ -10,6 +10,8 @@
 //= partials/helper.js
 //= partials/owl.carousel.js
 //= partials/jquery.magnific-popup.min.js
+//= partials/waypoints.js
+//= partials/animate.js
 
 function forSVG() {
     $('.svg').each(function() {
@@ -127,6 +129,20 @@ $(document).ready(function() {
 	    enabled:true
 	  }
 	});
+
+	//animate css section
+
+
+	$(".capabilities__circles-circle").animated("fadeInDown", "fadeOutDown");
+	$(".capabilities__circles-descr").animated("fadeInUp", "fadeOutDown");
+	$(".capabilities__item").animated("fadeInLeft capabilities__item--green", "fadeOutLeft");
+	$(".calculator").animated("fadeInLeft", "fadeOutLeft");
+	$(".our-advantages").animated("fadeInRight", "fadeOutLeft");
+	$(".title").animated("zoomIn", "zoomOut");
+	$(".how-we-work__step__circle").animated("fadeInLeft", "fadeOutRight");
+	$(".how-we-work__step__descr").animated("fadeIn", "fadeOut");
+
+
 
 });
 

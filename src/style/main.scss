@@ -3,6 +3,8 @@
 */
 @import "../../bower_components/normalize.css/normalize.css";
 @import "../../bower_components/bootstrap/dist/css/bootstrap.min.css";
+@import "../../bower_components/animate.css/animate.css";
+
 
 /*
 * Custom
@@ -50,12 +52,19 @@ a{
 
 
 .header{
-	height: 160px;
+	height: 94px;
 	background-color: #fff;
 	box-shadow: 0px 2px 3px rgba(0,0,0,.3);
 	width: 100%;
 	display: flex;
 	align-items: center;
+	&__logo{
+		width: 245px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
 	&__container{
 		height: 100%;
 		display: flex;
@@ -65,7 +74,7 @@ a{
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
-		min-width: 650px;
+		min-width: 780px;
 		padding-bottom: 3px;
 		&__mail{
 			position: relative;
@@ -144,10 +153,10 @@ a{
 	&__container{
 		width: 100%;
 		background-color: rgba(0,0,0,.62);
-		padding: 13px;
+		padding: 9px;
 	}
 	&__inner{
-		border: 2px solid #fff;
+		border: 1px solid #fff;
 		color: #fff;
 		padding: 68px;
 		display: flex;
@@ -168,15 +177,12 @@ a{
 				font-family: "page";
 			}
 			.c1{
-				color: #f93f26;
 				text-transform: uppercase;
 			}
 			.c2{
-				color: #fc7720;
 				text-transform: uppercase;
 			}
 			.c3{
-				color: #fae23f;
 				text-transform: uppercase;
 				margin-bottom: 32px;
 			}
@@ -207,7 +213,7 @@ a{
 			margin-bottom: 20px;
 			input{
 				background-color: transparent;
-				border: 2px solid #fff;
+				border: 1px solid #fff;
 				width: 100%;
 				height: 44px;
 				font-size: 22px;
@@ -215,7 +221,7 @@ a{
 				color: #fff;
 				padding: 2px 15px;
 				&:focus{
-					border-color: #04ca12;
+					border-color: #ebaf1d;
 					outline: none;
 				}
 				&::-moz-placeholder{
@@ -235,14 +241,14 @@ a{
 			input{
 				text-transform: uppercase;
 				border-radius: 12px;
-				background-color: #04ca12;
+				background-color: #f93f26;
 				border: none;
 				padding: 14px 19px;
 				font-size: 27px;
 				font-family: "fran-d";
 				transition: background-color .2s ease;
 				&:hover{
-					background-color: #0ab015;
+					background-color: #d63a25;
 				}
 			}
 		}
@@ -350,7 +356,7 @@ a{
 		}
 	}
 	&__download{
-		margin: 90px;
+		margin: 30px;
 		text-align: center;
 		&__link{
 			background-color: #f93f26;
@@ -380,8 +386,14 @@ a{
 	}
 	&__item{
 		margin-bottom: 46px;
-		&:before{
-
+		&:nth-child(1){
+			 animation-delay: 0.2s;
+		}
+		&:nth-child(2){
+			animation-delay: 0.9s;
+		}
+		&:nth-child(3){
+			animation-delay: 1.7s;
 		}
 		span{
 			position: relative;
@@ -396,6 +408,14 @@ a{
 				left: -60px;
 				top: 50%;
 				margin-top: -18px;
+			}
+		}
+		&--green{
+			span{
+				&:before{
+					background-image: url("/img/chck3.png");
+
+				}
 			}
 		}
 		strong{
@@ -421,6 +441,7 @@ a{
 			box-shadow: 0px 0px 1px 2px rgb(249,63,38);
 			margin-bottom: 20px;
 			color: #373737;
+			animation-delay: 2.5s;
 			&.ic1{
 				background-image: url("/img/srites.png");
 				background-position: center 22px;
@@ -448,6 +469,7 @@ a{
 			font-size: 19px;
 			text-transform: uppercase;
 			padding-bottom: 90px;
+			animation-delay: 2.5s;
 		}
 	}
 }
@@ -469,6 +491,7 @@ a{
 	background-color: #fff;
 	width: 390px;
 	max-width: 390px;
+	animation-delay: 1s;
 	&__inner{
 		padding: 40px 30px;
 		text-align: center;
@@ -554,12 +577,16 @@ a{
 				height: 33px;
 				border: 1px solid #555555;
 				padding: 0px 20px;
+				&:hover{
+					border-color: #ebaf1d;
+				}
 			}
 			textarea{
 				resize: none;
 				height: 100px;
 				padding: 10px 20px;
 			}
+			
 		}
 		&__button{
 			@extend .our-services__download__link;
@@ -571,6 +598,7 @@ a{
 .our-advantages{
 	@extend .calculator;
 	min-width: 720px;
+	animation-delay: 1s;
 	&__title{
 		margin-bottom: 30px;
 		h2{
@@ -588,7 +616,7 @@ a{
 	}
 	&__item{
 		margin-bottom: 30px;
-		text-align: center;
+		text-align: left;
 		span{
 			position: relative;
 			display: inline-block;
@@ -639,6 +667,24 @@ a{
 		text-align: center;
 		width: 140px;
 		align-items: center;
+		&:nth-child(1) .how-we-work__step__descr{
+			animation-delay: 0s;
+		}
+		&:nth-child(2) .how-we-work__step__descr{
+			animation-delay: .4s;
+		}
+		&:nth-child(3) .how-we-work__step__descr{
+			animation-delay: .8s;
+		}
+		&:nth-child(4) .how-we-work__step__descr{
+			animation-delay: 1.2s;
+		}
+		&:nth-child(5) .how-we-work__step__descr{
+			animation-delay: 1.6s;
+		}
+		&:nth-child(6) .how-we-work__step__descr{
+			animation-delay: 2s;
+		}
 		&__circle{
 			width: 122px;
 			height: 123px;
@@ -647,26 +693,32 @@ a{
 			&.ic1{
 				background-image: url(/img/circles-sprite.png);
 				background-position: center 0px;
+				animation-delay: 0s;
 			}
 			&.ic2{
 				background-image: url(/img/circles-sprite.png);
 				background-position: center -123px;
+				animation-delay: .4s;
 			}
 			&.ic3{
 				background-image: url(/img/circles-sprite.png);
 				background-position: center -246px;
+				animation-delay: .8s;
 			}
 			&.ic4{
 				background-image: url(/img/circles-sprite.png);
 				background-position: center -369px;
+				animation-delay: 1.2s;
 			}
 			&.ic5{
 				background-image: url(/img/circles-sprite.png);
 				background-position: center -492px;
+				animation-delay: 1.6s;
 			}
 			&.ic6{
 				background-image: url(/img/circles-sprite.png);
 				background-position: center -615px;
+				animation-delay: 2s;
 			}
 
 			&:after{
@@ -711,7 +763,7 @@ a{
 			position: absolute;
 			top: 0;
 			right: 0;
-			width: 475px;
+			width: 519px;
 			background-color: #fff;
 			z-index: 999;
 			padding: 10px;
@@ -821,6 +873,14 @@ a{
 						border: 1px solid #333;
 						padding: 5px 20px;
 					}
+
+					tr{
+						transition: all .2s ease;
+						&:hover{
+							background-color: #e92e1c;
+							color: #fff;
+						}
+					}
 				}
 			}
 		}
@@ -832,8 +892,8 @@ a{
 	background-color: #d6421a;
 	&__inner{
 		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: column;
 		width: 100%;
 	}
 	&__text{
@@ -850,10 +910,11 @@ a{
 		}
 		p{
 			font-size: 16px;
+			margin-bottom: 35px;
 		}
 	}
 	&__form-wrap{
-		width: 50%;
+		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -881,7 +942,7 @@ a{
 			}
 		}
 		&__input{
-			width: 47%;
+			width: 30%;
 			margin-bottom: 20px;
 			input{
 				width: 100%;
@@ -985,6 +1046,9 @@ a{
 	height: auto;
 	background-color: #202020;
 	border-bottom: 11px solid #e92e1c;
+	&__logo{
+		@extend .header__logo;
+	}
 	&__top{
 		padding: 35px 0;
 		border-bottom: 1px solid #e92e1c;
