@@ -7,7 +7,7 @@
 								
 						};
 				}, {
-						offset: "70%"
+						offset: "90%"
 				}).waypoint(function(dir) {
 						if (dir === "down") {
 								$(this).css("opacity", "1");

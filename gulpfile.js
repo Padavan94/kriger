@@ -162,7 +162,7 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style) 
-        /*.pipe(plumber())*/
+        .pipe(plumber())
         /*.pipe(sourcemaps.init())*/
         .pipe(sass({
             includePaths: ['src/style/'],

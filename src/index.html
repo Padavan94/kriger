@@ -16,7 +16,7 @@
 					<div class="banner__inner__question">
 						<div>Хотите узнать, когда <br> <span>ЗАРАБОТАЕТ ВАШ КОТЕЛ?</span></div>
 					</div>
-					<form action="/post.php" method= "POST" class="banner__form">
+					<form id="formx" action="/post.php" method= "POST" class="banner__form formx">
 						<div class="banner__form__input">
 							<input type="text" placeholder="Ваше имя" name="name">
 						</div>
@@ -24,13 +24,13 @@
 							<input type="text" placeholder="Ваш номер телефона" name="phone">
 						</div>
 						<div class="banner__form__input" >
-							<input type="text" placeholder="Ваш E-mail" name="mail">
+							<input type="email" placeholder="Ваш E-mail" name="mail">
 						</div>
 						<div class="banner__form__input">
 							<input type="text" placeholder="Мощность" name="power">
 						</div>
 						<div class="banner__form__submit">
-							<input type="submit" value="позвоните нам">
+							<input type="submit" value="Позвоните нам">
 						</div>
 					</form>
 				</div>
@@ -103,7 +103,7 @@
 			</div>
 
 			<div class="our-services__download">
-				<a class="our-services__download__link" href="#">скачать каталог</a>
+				<a class="our-services__download__link open-popup" href=".popup-form">скачать каталог</a>
 			</div>
 		</div>
 	</div>
@@ -149,8 +149,8 @@
 					</div>
 					<form action="#" class="calculator__form">
 						<div class="calculator__form__input">
-							<label class="ic1" for="">Выберите вид котла</label>
-							<select name="#" id="#">
+							<label class="ic1" for	="">Выберите вид котла</label>
+							<select name="#" id="#" class="type">
 								<option value="1">Водогрейный котел</option>
 								<option value="1">Термомасляный котел</option>
 								<option value="1">Для производства перегретой воды</option>
@@ -158,13 +158,21 @@
 						</div>
 						<div class="calculator__form__input">
 							<label class="ic2" for="">Укажите тип топлива</label>
-							<input type="text" placeholder="Тип топлива">
+							<select name="#" id="#" class="oil">
+								<option value="1">Щепа</option>
+								<option value="1">Лузга</option>
+								<option value="1">Солома</option>
+								<option value="1">Уголь</option>
+								<option value="1">Торф</option>
+								<option value="1">Пеллеты</option>
+								<option value="1">Мескантус</option>
+							</select>
 						</div>
 						<div class="calculator__form__input">
 							<label class="ic3" for="">Введите мощность котла</label>
-							<input type="text" placeholder="Мощность">
+							<input type="text" class="power" placeholder="Мощность">
 						</div>
-						<a href="#" class="calculator__form__button">УЗНАТЬ СТОИМОСТЬ</a>
+						<a href=".popup-form2" class="calculator__form__button open-popup2">УЗНАТЬ СТОИМОСТЬ</a>
 					</form>
 				</div>
 			</div>
@@ -352,15 +360,15 @@
 				<p>Введите свои контактные данные в форму справа и наш менеджер свяжется с вами в ближайшее время.</p>
 			</div>
 			<div class="order__form-wrap">
-				<form action="#" class="order__form">
+				<form id="form2" action="#" class="order__form formx">
 					<div class="order__form__input">
-						<input type="text" placeholder="Ваше имя">
+						<input type="text" placeholder="Ваше имя" name="name">
 					</div>
 					<div class="order__form__input">
-						<input type="text" placeholder="Ваш E-mail">
+						<input type="email" placeholder="Ваш E-mail" name="mail">
 					</div>
 					<div class="order__form__input">
-						<input type="text" placeholder="Ваш номер телефона">
+						<input type="text" placeholder="Ваш номер телефона" name="phone">
 					</div>
 					<div class="order__form__submit">
 						<input type="submit" value="Перезвоните мне">
@@ -718,6 +726,64 @@
 	</div>
 </div>
 
+
+
+<div class="banner__inner__form-wrap popup-form mfp-hide">
+	<div class="banner__inner__question">
+		<div>Хотите узнать, когда <br> <span>ЗАРАБОТАЕТ ВАШ КОТЕЛ?</span></div>
+	</div>
+	<form id="form3" action="/post.php" method= "POST" class="banner__form formx">
+		<div class="banner__form__input">
+			<input type="text" placeholder="Ваше имя" name="name">
+		</div>
+		<div class="banner__form__input" >
+			<input type="text" placeholder="Ваш номер телефона" name="phone">
+		</div>
+		<div class="banner__form__input" >
+			<input type="email" placeholder="Ваш E-mail" name="mail">
+		</div>
+		<div class="banner__form__submit">
+			<input type="submit" value="позвоните нам">
+		</div>
+	</form>
+</div>
+
+
+<div class="banner__inner__form-wrap popup-form2 mfp-hide">
+	<div class="banner__inner__question">
+		<div>Хотите узнать, когда <br> <span>ЗАРАБОТАЕТ ВАШ КОТЕЛ?</span></div>
+	</div>
+	<form id="form4" action="/post.php" method= "POST" class="banner__form formx">
+		<input type="hidden" name="type">
+		<input type="hidden" name="oil">
+		<input type="hidden" name="power">
+
+		<div class="banner__form__input">
+			<input type="text" placeholder="Ваше имя" name="name">
+		</div>
+		<div class="banner__form__input" >
+			<input type="text" placeholder="Ваш номер телефона" name="phone">
+		</div>
+		<div class="banner__form__input" >
+			<input type="email" placeholder="Ваш E-mail" name="mail">
+		</div>
+		<div class="banner__form__submit">
+			<a href="#" type="submit" onclick="call('#form4');">позвоните нам</a>
+		</div>
+	</form>
+</div>
+
+<div class="banner__inner__form-wrap popup-form3 mfp-hide">
+	<div class="banner__inner__question">
+		<div>Ваш заявка была отправлена</div>
+	</div>
+</div>
+
+<div class="banner__inner__form-wrap popup-form4 mfp-hide">
+	<div class="banner__inner__question">
+		<div>Ошибка отправки</div>
+	</div>
+</div>
 
 
 //= template/footer.html

@@ -7,6 +7,9 @@
 	.our-advantages{min-width: 534px;}
 	.completed-projects__carousel__item-img{width: 464px; margin-bottom: 2px;}
 	.completed-projects__carousel__item-type{padding: 15px 15px 15px 100px;}
+	.footer__info, .header__info{min-width: 667px;}
+	.footer__logo, .header__logo{width: 238px;}
+
 }
 
 @media only screen and (max-width : 992px) {
@@ -15,7 +18,7 @@
 	.header__logo img, .footer__logo img{width: 300px; height: auto;}
 	.header__info,.footer__info{min-width: 100%;}
 	.header{height: auto; padding: 20px 10px;}
-	.banner__inner{flex-direction: column; padding: 35px;}
+	.banner__inner{flex-direction: column; padding: 35px; max-height: 10000px;}
 	.banner__inner__question{margin-bottom: 30px;}
 	.banner__inner__form-wrap{margin-left: 0;}
 	.calculator{width: 340px;}
@@ -37,6 +40,9 @@
 	.banner__inner__losung h1{margin-bottom: 30px;}
 	.completed-projects__carousel__item-text{margin-top: 15px; width: 100%;}
 	.completed-projects__carousel__item-img{width: 100%;}
+	.banner__inner__losung, .banner__inner__form-wrap{width: 100%;}
+
+
 }	
  
 @media only screen and (max-width : 768px) {
@@ -67,8 +73,11 @@
 	.quality-standards,.certificates{padding: 40px 0;}
 	.certificates__title{margin-bottom: 40px;}
 	.certificates__container a{margin-bottom: 30px;}
-	.footer__info__mail, .footer__info__order, .footer__info__phones, .header__info__mail, .header__info__order, .header__info__phones{margin: 5px 5px 10px 5px;}
+	.footer__info__mail, .footer__info__order, .footer__info__phones, .header__info__mail, .header__info__order, .header__info__phones{margin: 5px 5px 23px;}
 	.completed-projects__carousel__item-descr{padding: 15px;}
+	.calculator__inner, .our-advantages__inner{min-height: auto;}
+	.banner__inner__losung{width: auto;}
+
 }
 
 
@@ -91,6 +100,9 @@
 	.banner__inner__losung h1{font-size: 41px;}
 	.our-advantages__item, .quality-standards__item{text-align: left;}
 	.container{padding-left: 0;padding-right: 0;}
+	.capabilities__item {font-size: 17px;}
+	.capabilities__item span:before{    left: -35px;}
+	.footer__bottom__container{flex-direction: column; text-align: center;}
 }
 
 @media only screen and (max-width : 360px) {

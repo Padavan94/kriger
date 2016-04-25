@@ -3,6 +3,7 @@
  */
 //= ../../bower_components/jquery/dist/jquery.min.js
 //= ../../bower_components/parallax.js/parallax.min.js
+//= ../../bower_components/jquery-validation/dist/jquery.validate.js
 
 /*
     Custom
@@ -12,6 +13,7 @@
 //= partials/jquery.magnific-popup.min.js
 //= partials/waypoints.js
 //= partials/animate.js
+
 
 function forSVG() {
     $('.svg').each(function() {
@@ -44,10 +46,177 @@ function forSVG() {
 
 
 
+function getCoast(){
+	var type, oil;
+	type = $(".calculator__form__button").parent().find(".type option:selected").html();
+	oil = $(".calculator__form__button").parent().find(".oil option:selected").html();
+	power = $(".calculator__form__button").parent().find(".power").val();
+	var obj = {"type": type, "oil": oil, "power": power};
+	return obj;
+}
+
+
+function call(form) {
+ 	var msg   = $(form).serialize();
+	$.ajax({
+		type: 'POST',
+		url: 'post.php',
+		data: msg,
+	success: function(data) {
+		$.magnificPopup.open({
+		  items: {
+		    src: '.popup-form3'
+		  },
+		  type: 'inline'
+		});
+		$("input[type='text']").val("");
+	},
+	error:  function(xhr, str){
+		/*$.magnificPopup.open({
+		  items: {
+		    src: '.popup-form4'
+		  },
+		  type: 'inline'
+		});*/
+	}
+		
+    });
+}
+
+
 
 
 $(document).ready(function() {
 	forSVG();
+
+	//validation
+
+
+	$("#formx").validate({
+	submitHandler: function(form) {
+		call("#formx");
+	},
+	  rules: {
+	    // simple rule, converted to {required:true}
+	    phone: {
+	    	"required" : true,
+	    	"number" : true
+	    },
+	    mail: {
+	    	email: true
+	    }
+	    // compound rule
+	    /*email: {
+	      required: true,
+	      email: true
+	    }*/
+	  },
+		messages: {
+			phone: {
+				"required" : "Введите номер, пожалуйста",
+				"number" : "Номер должен состоять из цифр"
+			},
+			mail: {
+				email: "Введите коректный емейл"
+			}
+		}
+
+	});
+
+	$("#form2").validate({
+	submitHandler: function(form) {
+		call("#form2");
+	},
+	  rules: {
+	    // simple rule, converted to {required:true}
+	    phone: {
+	    	"required" : true,
+	    	"number" : true
+	    },
+	    mail: {
+	    	email: true
+	    }
+	    // compound rule
+	    /*email: {
+	      required: true,
+	      email: true
+	    }*/
+	  },
+		messages: {
+			phone: {
+				"required" : "Введите номер, пожалуйста",
+				"number" : "Номер должен состоять из цифр"
+			},
+			mail: {
+				email: "Введите коректный емейл"
+			}
+		}
+
+	});
+
+	$("#form3").validate({
+	submitHandler: function(form) {
+		call("#form3");
+	},
+	  rules: {
+	    // simple rule, converted to {required:true}
+	    phone: {
+	    	"required" : true,
+	    	"number" : true
+	    },
+	    mail: {
+	    	email: true
+	    }
+	    // compound rule
+	    /*email: {
+	      required: true,
+	      email: true
+	    }*/
+	  },
+		messages: {
+			phone: {
+				"required" : "Введите номер, пожалуйста",
+				"number" : "Номер должен состоять из цифр"
+			},
+			mail: {
+				email: "Введите коректный емейл"
+			}
+		}
+
+	});
+
+	$("#form4").validate({
+	submitHandler: function(form) {
+		call("#form4");
+	},
+	  rules: {
+	    // simple rule, converted to {required:true}
+	    phone: {
+	    	"required" : true,
+	    	"number" : true
+	    },
+	    mail: {
+	    	email: true
+	    }
+	    
+	    // compound rule
+	    /*email: {
+	      required: true,
+	      email: true
+	    }*/
+	  },
+		messages: {
+			phone: {
+				"required" : "Введите номер, пожалуйста",
+				"number" : "Номер должен состоять из цифр"
+			},
+			mail: {
+				email: "Введите коректный емейл"
+			}
+
+		}
+
+	});
 
 
 	$('.parallax-window').parallax({imageSrc: '/img/big.jpg'});
@@ -130,6 +299,25 @@ $(document).ready(function() {
 	  }
 	});
 
+	$(".open-popup").magnificPopup({
+	  type:'inline',
+	  midClick: true,
+	});
+
+	$(".open-popup2").magnificPopup({
+	  callbacks: {
+	  	open: function() {
+		    var obj = getCoast();
+		    this.content.find('input[name="type"]').val(obj.type);
+		    this.content.find('input[name="oil"]').val(obj.oil);
+		    this.content.find('input[name="power"]').val(obj.power);
+		  }
+	  },
+	  type:'inline',
+	  midClick: true,
+	});
+
+
 	//animate css section
 
 
@@ -142,6 +330,9 @@ $(document).ready(function() {
 	$(".how-we-work__step__circle").animated("fadeInLeft", "fadeOutRight");
 	$(".how-we-work__step__descr").animated("fadeIn", "fadeOut");
 
+
+
+	
 
 
 });

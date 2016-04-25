@@ -2,12 +2,15 @@
 echo $_POST['name'];
 echo $_POST['mail'];
 echo $_POST['phone'];
+echo $_POST['capacity'];
+echo $_POST['type'];
+echo $_POST['oil'];
 
 if((isset($_POST['phone'])&&$_POST['phone']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
 
 
 		$from = $_POST['mail'];
-		$to = "padavan94@gmail.com";
+		$to = "webmarketingua@gmail.com";
 		$subject = "garnetbuild - lp1";
 		$message = '
                 <html>
@@ -15,11 +18,11 @@ if((isset($_POST['phone'])&&$_POST['phone']!="")){ //Проверка отпра
                         <title>'.$subject.'</title>
                     </head>
                     <body>
-					Форма на слайде
+					Форма обратной связи
 						<table>
 							<tbody>
 								<tr>
-									<td style="width: 100px;">Имя:-</td>
+									<td style="width: 100px;">Имя:</td>
 									<td>'.$_POST['name'].'</td>
 								</tr>
 								<tr>
@@ -29,6 +32,18 @@ if((isset($_POST['phone'])&&$_POST['phone']!="")){ //Проверка отпра
 								<tr>
 									<td style="width: 100px;">Почта:</td>
 									<td>'.$_POST['mail'].'</td>
+								</tr>
+								<tr>
+									<td style="width: 100px;">Мощность:</td>
+									<td>'.$_POST['power'].'</td>
+								</tr>
+								<tr>
+									<td style="width: 100px;">Вид топлива:</td>
+									<td>'.$_POST['oil'].'</td>
+								</tr>
+								<tr>
+									<td style="width: 100px;">Тип котла:</td>
+									<td>'.$_POST['type'].'</td>
 								</tr>
 							</tbody>
 						</table>                  

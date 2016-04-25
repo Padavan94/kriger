@@ -29,11 +29,11 @@ a{
 	}
 }
 .seporator{
-	background-image: url("/img/schema.png");
-	background-size: contain;
+	background-image: url("/img/schema.svg");
+	background-size: 100% auto;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 85px;
+	height: 90px;
 	width: 100%;
 	margin: 18px 0;
 
@@ -72,7 +72,8 @@ a{
 	}
 	&__info{
 		display: flex;
-		justify-content: space-between;
+		/* justify-content: space-between; */
+		justify-content: space-around;
 		align-items: flex-end;
 		min-width: 780px;
 		padding-bottom: 3px;
@@ -104,7 +105,7 @@ a{
 			padding-left: 48px;
 			&:before{
 				@extend .header__info__mail:before;
-				top: 50%;
+				/* top: 50%; */
 				margin-top: -16px;
 				bottom: auto;
 				background-position: center bottom;
@@ -126,6 +127,7 @@ a{
 				color: #fff;
 				border-radius: 7px;
 				background-color: #f93f26;
+				background-image: url("/img/texture-05.svg");
 				padding: 10px 14px;
 				font-family: "fran-d";
 				position: relative;
@@ -133,7 +135,7 @@ a{
 				&:hover,
 				&:active,
 				&:focus{
-					background-color: #d63a25;
+					background-color: transparent;
 					color: #fffeee;
 					text-decoration: none;
 				}
@@ -161,6 +163,7 @@ a{
 		padding: 68px;
 		display: flex;
 		justify-content: space-between;
+		max-height: 597px;
 		&__losung{
 			display: flex;
 			flex-direction: column;
@@ -169,6 +172,7 @@ a{
 			text-align: center;
 			font-family: "fran-d";
 			text-align: center;
+			width: 558px;
 			h1{
 				font-size: 63px;
 				margin-top: 0;
@@ -205,7 +209,23 @@ a{
 		}
 		&__form-wrap{
 			min-width: 371px;
+			width: 371px;
 			margin-left: 38px;
+			&.popup-form,&.popup-form2,&.popup-form3,&.popup-form4{
+				max-width: 371px;
+				margin: 0px auto;
+				position: relative;
+				padding: 20px 15px;
+				background-color: rgba(0,0,0,.6);
+				border-radius: 10px;
+				min-width: auto;
+			}
+			&.popup-form3,&.popup-form4{
+				text-align: center;
+			}
+			.mfp-close{
+				color: #fff;
+			}
 		}
 	}
 	&__form{
@@ -238,14 +258,17 @@ a{
 			width: 100%;
 			text-align: center;
 			margin-top: 40px;
-			input{
-				text-transform: uppercase;
-				border-radius: 12px;
+			a,input{
+				font-size: 19px;
+				color: #fff;
+				border-radius: 7px;
 				background-color: #f93f26;
+				background-image: url(/img/texture-05.svg);
+				padding: 10px 14px;
+				font-family: fran-d;
+				position: relative;
 				border: none;
-				padding: 14px 19px;
-				font-size: 27px;
-				font-family: "fran-d";
+				text-transform: uppercase;
 				transition: background-color .2s ease;
 				&:hover{
 					background-color: #d63a25;
@@ -366,10 +389,11 @@ a{
 			border-radius: 7px;
 			color: #fff;
 			text-transform: uppercase;
+			background-image: url(/img/texture-05.svg);
 			&:hover{
 				text-decoration: none;
 				color: #fff;
-				background-color: #d63a25;
+				background-color: transparent;
 			}
 		}
 	}
@@ -469,7 +493,7 @@ a{
 			font-size: 19px;
 			text-transform: uppercase;
 			padding-bottom: 90px;
-			animation-delay: 2.5s;
+			animation-delay: 2s;
 		}
 	}
 }
@@ -687,37 +711,38 @@ a{
 		}
 		&__circle{
 			width: 122px;
-			height: 123px;
+			height: 80px;
 			margin-bottom: 100px;
 			position: relative;
+			background-repeat: no-repeat;
 			&.ic1{
-				background-image: url(/img/circles-sprite.png);
+				background-image: url(/img/circles-sprite2.png);
 				background-position: center 0px;
 				animation-delay: 0s;
 			}
 			&.ic2{
-				background-image: url(/img/circles-sprite.png);
-				background-position: center -123px;
+				background-image: url(/img/circles-sprite2.png);
+				    background-position: center -117px;
 				animation-delay: .4s;
 			}
 			&.ic3{
-				background-image: url(/img/circles-sprite.png);
-				background-position: center -246px;
+				background-image: url(/img/circles-sprite2.png);
+				background-position: center -221px;
 				animation-delay: .8s;
 			}
 			&.ic4{
-				background-image: url(/img/circles-sprite.png);
-				background-position: center -369px;
+				background-image: url(/img/circles-sprite2.png);
+				background-position: center -357px;
 				animation-delay: 1.2s;
 			}
 			&.ic5{
-				background-image: url(/img/circles-sprite.png);
-				background-position: center -492px;
+				background-image: url(/img/circles-sprite2.png);
+				background-position: center -521px;
 				animation-delay: 1.6s;
 			}
 			&.ic6{
-				background-image: url(/img/circles-sprite.png);
-				background-position: center -615px;
+				background-image: url(/img/circles-sprite2.png);
+				    background-position: center -681px;
 				animation-delay: 2s;
 			}
 
@@ -804,7 +829,7 @@ a{
 
 		&__item{
 			&-descr{
-				padding: 15px 0;
+				padding: 30px 0;
 				font-size: 17px;
 			}
 			&-img{
@@ -927,8 +952,9 @@ a{
 		&__submit{
 			width: 100%;
 			text-align: center;
-			input{
+			a, input{
 				border-radius: 12px;
+				display: inline-block;
 				background-color: #04ca12;
 				border: none;
 				padding: 10px 40px;
@@ -1080,7 +1106,7 @@ a{
 			@extend .header__info__phones;
 			&:before{
 				@extend .header__info__mail:before;
-				top: 50%;
+				/* top: 50%; */
 				margin-top: -16px;
 				bottom: auto;
 				background-position: center bottom;
@@ -1093,11 +1119,10 @@ a{
 		&__order{
 			&-link{
 				@extend .header__info__order-link;
-				background-color: #04ca12;
 				&:hover,
 				&:active,
 				&:focus{
-					background-color: #0ab015;
+					background-color: transparent;
 					color: #fff;
 					text-decoration: none;
 				}
@@ -1126,8 +1151,22 @@ a{
 	}
 }
 
-
-
+input.error{
+	border-color: red !important;
+}
+label.error{
+	color: red;
+	letter-spacing: 2px;
+}
+.order__form__input {
+	input.error{
+		border-color: #fff !important;
+	}
+	label.error{
+		color: #fff;
+		letter-spacing: 2px;
+	}
+}
 
 
 @import "partials/media";
